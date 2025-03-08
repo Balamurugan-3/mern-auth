@@ -8,6 +8,9 @@
     "dev": "cross-env NODE_ENV=development nodemon backend/index.js",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
+  "engines": {
+    "node": "20.15.1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
