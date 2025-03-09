@@ -12,7 +12,8 @@ const App = () => {
 
   const { data, isSuccess, isLoading } = useIsAuthQuery(undefined, {
     skip: isLoggedIn,
-    refetchOnReconnect: false
+    refetchOnReconnect: false,
+    refetchOnMountOrArgChange:true
   })
 
   useEffect(() => {

@@ -3,29 +3,34 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const authAPI = createApi({
     reducerPath: "authAPI",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:8000/api/auth",
+        baseUrl: "https://mern-auth-g7l1.onrender.com/api/auth",
         credentials: "include"
     }),
+    tagTypes : ["User"],
+
     endpoints: (builder) => ({
         registerUser: builder.mutation({
             query: (data) => ({
                 url: "/register",
                 method: "POST",
                 body: data
-            })
+            }),
+            providesTags: ['User']
         }),
         loginUser: builder.mutation({
             query: (data) => ({
                 url: "/login",
                 method: "POST",
                 body: data
-            })
+            }),
+            providesTags: ['User']
         }),
         logoutUser: builder.mutation({
             query: () => ({
                 url: "/logout",
                 method: "POST"
-            })
+            }),
+            providesTags: ['User']
         }),
         accountVerificationOTP: builder.mutation({
             query: () => ({
