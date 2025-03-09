@@ -61,7 +61,7 @@ const AccountVerify = () => {
 
     return (
         <div className='w-full min-h-[calc(100vh-4rem)] flex items-center justify-center p-4'>
-            <form className='sm:w-96 w-full -full bg-indigo- border sm:p-7 p-2 py-4 text-center space-y-6'
+            <form className='sm:w-96 w-full border sm:p-7 p-2 py-4 text-center space-y-6'
                 onSubmit={handleSubmit}>
                 <div>
                     <h1 className='sm:text-3xl text-xl font-medium text-blue-600'>Account Verify OTP</h1>
